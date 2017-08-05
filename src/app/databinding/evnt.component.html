@@ -1,0 +1,16 @@
+<div class="row">
+  <div class="col-md-12">
+    <input value="Okay" type="button" (click)="chngDt()" class="btn btn-primary">{{dt}}
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-12" [class.well]="isApplied">
+    Hello
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-12">
+    <input value="Okay" type="button" (click)="isApplied=!isApplied" class="btn btn-primary">
+  </div>
+</div>
