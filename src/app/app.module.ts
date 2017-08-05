@@ -6,6 +6,7 @@ import { HelloComponent } from './hello/hello.component';
 import { HelloInComponent } from './hello/hello-in.component';
 import { HelloSameComponent } from './hello/hello-same.component';
 import { ViewEncapsulationComponent } from './view-encapsulation/view-encapsulation.component';
+import { FbLoginComponent } from './view-encapsulation/fb-login.component';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { ViewEncapsulationComponent } from './view-encapsulation/view-encapsulat
     HelloComponent,
     HelloInComponent,
     HelloSameComponent,
-    ViewEncapsulationComponent
+    ViewEncapsulationComponent,
+    FbLoginComponent
   ],
   imports: [
     BrowserModule
