@@ -13,3 +13,11 @@
     hi
   </div>
 </div>
+<div class="row">
+  <div class="col-md-12">
+    Custom Prop - {{custProp}}
+  </div>
+</div>
+<ul>
+  <li *ngFor="let ob of anyObj.list;let pos = index" (click)="tmpObj = anyObj">{{ob}} -> {{pos}}</li>
+</ul>

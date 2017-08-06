@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-evnt',
@@ -7,13 +7,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EvntComponent implements OnInit {
 
+  @Output()
+  custEv: EventEmitter<any>;
+
   dt: string;
-  constructor() { }
+  constructor() {
+    this.custEv = new EventEmitter<any>();
+  }
 
   ngOnInit() {
   }
 
   chngDt() {
     this.dt = new Date().toString();
+    this.custEv.emit({ dt: this.dt, pos: 0 });
   }
 }

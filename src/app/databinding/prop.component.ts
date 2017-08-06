@@ -1,12 +1,23 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-prop',
   templateUrl: './prop.component.html',
   styleUrls: ['./prop.component.css']
 })
-
 export class PropComponent implements OnInit {
+
+  tmpObj: any;
+
+  anyObj = {
+    list: [
+      'Android', 'Ios', 'Rim', 'Windows'
+    ]
+  };
+  // @Input('prop')
+  @Input()
+  custProp: string;
+
   typ: string;
 
   constructor() {
@@ -14,5 +25,6 @@ export class PropComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.typ = 'button';
   }
 }

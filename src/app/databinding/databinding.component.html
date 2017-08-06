@@ -5,5 +5,7 @@
     <h4>Upper = {{nmUpper()}} </h4>
   </div>
 </div>
-<app-prop></app-prop>
-<app-evnt></app-evnt>
+<!-- <app-prop [prop]="'android'"></app-prop> -->
+<app-prop [custProp]="nm"></app-prop>
+<app-evnt (custEv)="nm=$event"></app-evnt>
+<app-evnt (custEv)="emited($event)"></app-evnt>

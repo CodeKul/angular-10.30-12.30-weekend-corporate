@@ -19,4 +19,8 @@ export class DatabindingComponent implements OnInit {
   ngOnInit() {
   }
 
+  emited(str: string) {
+    console.log(str);
+    this.nm = str;
+  }
 }

@@ -1,0 +1,20 @@
+<div class="row">
+  <div class="col-md-12">
+    <app-content [imgNm]="nm"></app-content>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-12">
+    <app-btn-panel (imgEv)="nm=$event"></app-btn-panel>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-12">
+    <input type="text" [(ngModel)]="hi"> {{hi}}
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-12">
+    <input type="text" [value]="hi"/>
+  </div>
+</div>

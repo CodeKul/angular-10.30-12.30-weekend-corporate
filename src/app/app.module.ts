@@ -11,6 +11,9 @@ import { FbLoginComponent } from './view-encapsulation/fb-login.component';
 import { DatabindingComponent } from './databinding/databinding.component';
 import { PropComponent } from './databinding/prop.component';
 import { EvntComponent } from './databinding/evnt.component';
+import { InterCompComComponent } from './inter-comp-com/inter-comp-com.component';
+import { ContentComponent } from './inter-comp-com/content.component';
+import { BtnPanelComponent } from './inter-comp-com/btn-panel.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +25,10 @@ import { EvntComponent } from './databinding/evnt.component';
     FbLoginComponent,
     DatabindingComponent,
     PropComponent,
-    EvntComponent
+    EvntComponent,
+    InterCompComComponent,
+    ContentComponent,
+    BtnPanelComponent
   ],
   imports: [
     BrowserModule,
