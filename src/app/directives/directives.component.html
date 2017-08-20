@@ -1,0 +1,24 @@
+<div class="row">
+  <div class="col-md-12">
+    <input type="text" [ngStyle]="myStyle" [ngClass]="{well : isWell}">
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-12">
+    <input type="button" (click)="changeBorder()" class="btn btn-default" value="Okay" />
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-3 ht" [magicDiv]="'red'">
+
+  </div>
+  <div class="col-md-3 ht" [magicDiv]="'green'">
+
+  </div>
+  <div class="col-md-3 ht" [magicDiv]="'blue'">
+
+  </div>
+  <div class="col-md-3 ht" [magicDiv]="'orange'">
+
+  </div>
+</div>

@@ -16,6 +16,8 @@ import { ContentComponent } from './inter-comp-com/content.component';
 import { BtnPanelComponent } from './inter-comp-com/btn-panel.component';
 import { ContentProjComponent } from './content-proj/content-proj.component';
 import { LocalRefsComponent } from './local-refs/local-refs.component';
+import { DirectivesComponent } from './directives/directives.component';
+import { MagicDivDirective } from './directives/magic-div.directive';
 
 @NgModule({
   declarations: [
@@ -32,7 +34,9 @@ import { LocalRefsComponent } from './local-refs/local-refs.component';
     ContentComponent,
     BtnPanelComponent,
     ContentProjComponent,
-    LocalRefsComponent
+    LocalRefsComponent,
+    DirectivesComponent,
+    MagicDivDirective
   ],
   imports: [
     BrowserModule,
