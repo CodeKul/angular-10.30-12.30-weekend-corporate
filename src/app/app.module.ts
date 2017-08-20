@@ -14,6 +14,8 @@ import { EvntComponent } from './databinding/evnt.component';
 import { InterCompComComponent } from './inter-comp-com/inter-comp-com.component';
 import { ContentComponent } from './inter-comp-com/content.component';
 import { BtnPanelComponent } from './inter-comp-com/btn-panel.component';
+import { ContentProjComponent } from './content-proj/content-proj.component';
+import { LocalRefsComponent } from './local-refs/local-refs.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,9 @@ import { BtnPanelComponent } from './inter-comp-com/btn-panel.component';
     EvntComponent,
     InterCompComComponent,
     ContentComponent,
-    BtnPanelComponent
+    BtnPanelComponent,
+    ContentProjComponent,
+    LocalRefsComponent
   ],
   imports: [
     BrowserModule,

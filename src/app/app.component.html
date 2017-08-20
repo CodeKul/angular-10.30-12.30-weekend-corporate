@@ -1,4 +1,16 @@
 <div class="container">
-    <app-inter-comp-com>    </app-inter-comp-com>
-</div>
+    <app-content-proj>
+        <app-local-refs #inner>
+            <div class="row">
+                <div class="col-md-12">
+                    <input type="text" #nm/>
+                    <input type="button" value="Local Ref Okay" class="btn btn-primary">
+                </div>
+            </div>
+        </app-local-refs>
+    </app-content-proj>
 
+    <app-content-proj>
+        <h1>Hello</h1>
+    </app-content-proj>
+</div>
