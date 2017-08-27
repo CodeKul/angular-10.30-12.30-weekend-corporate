@@ -8,7 +8,7 @@
     <input type="button" (click)="changeBorder()" class="btn btn-default" value="Okay" />
   </div>
 </div>
-<div class="row">
+<div class="row" *ngIf="shouldShow">
   <div class="col-md-3 ht" [magicDiv]="'red'">
 
   </div>
@@ -19,6 +19,38 @@
 
   </div>
   <div class="col-md-3 ht" [magicDiv]="'orange'">
+  </div>
+</div>
+<ng-template [ngIf]="shouldShow">
+  <div class="jumbotron">
+    <h1>hello world</h1>
+  </div>
+</ng-template>
+<div class="row">
+  <div class="col-md-12">
+    <input type="button" (click)="shouldShow = !shouldShow" value="Show Attribute Concept" class="btn btn-primary">
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-12">
+    <ul>
+      <li *ngFor="let mob of mobiles">{{mob}}</li>
+    </ul>
+  </div>
+</div>
 
+<div class="row well" *ngFor="let rr of ratingAndReview">
+  <div class="col-md-12">
+    <div>
+      {{rr.review}}
+    </div>
+    <rating
+      [max]="10" 
+      [ngModel]="rr.rating"
+      [readonly]="true" 
+      [disabled]="false" 
+      [required]="true"
+      [float]="true">
+    </rating>
   </div>
 </div>

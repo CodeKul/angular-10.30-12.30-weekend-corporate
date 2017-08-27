@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { RatingModule } from 'ngx-rating';
+import { Ng2TableModule } from 'ng2-table/ng2-table';
 
 import { AppComponent } from './app.component';
 import { HelloComponent } from './hello/hello.component';
@@ -18,6 +20,8 @@ import { ContentProjComponent } from './content-proj/content-proj.component';
 import { LocalRefsComponent } from './local-refs/local-refs.component';
 import { DirectivesComponent } from './directives/directives.component';
 import { MagicDivDirective } from './directives/magic-div.directive';
+import { MyTableComponent } from './my-table/my-table.component';
+
 
 @NgModule({
   declarations: [
@@ -36,11 +40,14 @@ import { MagicDivDirective } from './directives/magic-div.directive';
     ContentProjComponent,
     LocalRefsComponent,
     DirectivesComponent,
-    MagicDivDirective
+    MagicDivDirective,
+    MyTableComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    RatingModule,
+    Ng2TableModule
   ],
   providers: [],
   bootstrap: [AppComponent]
