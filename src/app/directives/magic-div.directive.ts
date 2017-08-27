@@ -1,4 +1,12 @@
-import { Directive, ElementRef, Renderer2, HostBinding, Input, OnInit } from '@angular/core';
+import {
+  Directive,
+  ElementRef,
+  Renderer2,
+  HostBinding,
+  Input,
+  OnInit,
+  HostListener
+} from '@angular/core';
 
 @Directive({
   // tslint:disable-next-line:directive-selector
@@ -13,6 +21,16 @@ export class MagicDivDirective implements OnInit {
   @HostBinding('style.background')
   bakCol: string;
 
+  @HostListener('mouseenter')
+  onIn() {
+    this.bakCol = this.randomColor();
+  }
+
+  @HostListener('mouseleave')
+  onOut() {
+    this.bakCol = this.randomColor();
+  }
+
   constructor(
     private elRef: ElementRef,
     private rend: Renderer2
@@ -24,5 +42,13 @@ export class MagicDivDirective implements OnInit {
 
   ngOnInit() {
     this.bakCol = this.defCol;
+  }
+
+  randomColor() {
+    let red = Math.floor(Math.random() * 256);
+    let green = Math.floor(Math.random() * 256);
+    let blue = Math.floor(Math.random() * 256);
+
+    return `rgb(${red}, ${green}, ${blue})`;
   }
 }
