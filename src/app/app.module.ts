@@ -1,3 +1,4 @@
+import { WebService } from './services/web.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
@@ -23,6 +24,9 @@ import { MagicDivDirective } from './directives/magic-div.directive';
 import { MyTableComponent } from './my-table/my-table.component';
 import { UnlessDirective } from './directives/unless.directive';
 import { LifecycleComponent } from './lifecycle/lifecycle.component';
+import { ServicesComponent } from './services/services.component';
+import { FbComponent } from './services/fb.component';
+import { InstaComponent } from './services/insta.component';
 
 
 @NgModule({
@@ -45,7 +49,10 @@ import { LifecycleComponent } from './lifecycle/lifecycle.component';
     MagicDivDirective,
     MyTableComponent,
     UnlessDirective,
-    LifecycleComponent
+    LifecycleComponent,
+    ServicesComponent,
+    FbComponent,
+    InstaComponent
   ],
   imports: [
     BrowserModule,
@@ -53,7 +60,7 @@ import { LifecycleComponent } from './lifecycle/lifecycle.component';
     RatingModule,
     Ng2TableModule
   ],
-  providers: [],
+  providers: [WebService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
