@@ -1,6 +1,7 @@
 import { TableData } from './table-data';
 import { Component, OnInit } from '@angular/core';
 
+// ${Appystack);
 @Component({
   selector: 'app-my-table',
   templateUrl: './my-table.component.html',

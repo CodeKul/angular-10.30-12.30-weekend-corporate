@@ -21,6 +21,7 @@ import { LocalRefsComponent } from './local-refs/local-refs.component';
 import { DirectivesComponent } from './directives/directives.component';
 import { MagicDivDirective } from './directives/magic-div.directive';
 import { MyTableComponent } from './my-table/my-table.component';
+import { UnlessDirective } from './directives/unless.directive';
 
 
 @NgModule({
@@ -41,7 +42,8 @@ import { MyTableComponent } from './my-table/my-table.component';
     LocalRefsComponent,
     DirectivesComponent,
     MagicDivDirective,
-    MyTableComponent
+    MyTableComponent,
+    UnlessDirective
   ],
   imports: [
     BrowserModule,

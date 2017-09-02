@@ -44,13 +44,16 @@
     <div>
       {{rr.review}}
     </div>
-    <rating
-      [max]="10" 
-      [ngModel]="rr.rating"
-      [readonly]="true" 
-      [disabled]="false" 
-      [required]="true"
-      [float]="true">
+    <rating [max]="10" [ngModel]="rr.rating" [readonly]="true" [disabled]="false" [required]="true" [float]="true">
     </rating>
+  </div>
+  <div [ngSwitch]="'2'">
+    <div *ngSwitchCase="'1'"> One</div>
+    <div *ngSwitchCase="'2'"> Two</div>
+    <div *ngSwitchCase="'3'"> Three</div>
+    <div *ngSwitchCase="'4'"> Four</div>
+  </div>
+  <div *unless="true">
+    <h1>Show This</h1>
   </div>
 </div>
