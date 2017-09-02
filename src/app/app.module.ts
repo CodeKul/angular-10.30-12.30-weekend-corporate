@@ -22,6 +22,7 @@ import { DirectivesComponent } from './directives/directives.component';
 import { MagicDivDirective } from './directives/magic-div.directive';
 import { MyTableComponent } from './my-table/my-table.component';
 import { UnlessDirective } from './directives/unless.directive';
+import { LifecycleComponent } from './lifecycle/lifecycle.component';
 
 
 @NgModule({
@@ -43,7 +44,8 @@ import { UnlessDirective } from './directives/unless.directive';
     DirectivesComponent,
     MagicDivDirective,
     MyTableComponent,
-    UnlessDirective
+    UnlessDirective,
+    LifecycleComponent
   ],
   imports: [
     BrowserModule,
