@@ -19,6 +19,10 @@ export class InstaComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+    let par : InstaComponent = this;
     this.tkn = this.web.token;
+    this.web.subscribeForToken(function (tkn) {
+      par.tkn = tkn;
+    });
   }
 }
