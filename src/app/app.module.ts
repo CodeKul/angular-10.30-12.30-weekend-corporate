@@ -1,3 +1,4 @@
+import { MyService } from './services/my.service';
 import { WebService } from './services/web.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -60,7 +61,7 @@ import { InstaComponent } from './services/insta.component';
     RatingModule,
     Ng2TableModule
   ],
-  providers: [WebService],
+  providers: [WebService, MyService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
