@@ -28,6 +28,8 @@ import { LifecycleComponent } from './lifecycle/lifecycle.component';
 import { ServicesComponent } from './services/services.component';
 import { FbComponent } from './services/fb.component';
 import { InstaComponent } from './services/insta.component';
+import { FormsComponent } from './forms/forms.component';
+import { TemplateDrivenComponent } from './forms/template-driven.component';
 
 
 @NgModule({
@@ -53,7 +55,9 @@ import { InstaComponent } from './services/insta.component';
     LifecycleComponent,
     ServicesComponent,
     FbComponent,
-    InstaComponent
+    InstaComponent,
+    FormsComponent,
+    TemplateDrivenComponent
   ],
   imports: [
     BrowserModule,
