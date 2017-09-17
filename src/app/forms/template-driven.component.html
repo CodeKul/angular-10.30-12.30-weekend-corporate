@@ -1,10 +1,20 @@
 <div class="container">
   <div class="row">
-    <div class="alert alert-danger">
-      <h4>Missing SELECT Support</h4>
-      This feature does not currently support SELECT tags - I'm still working out a way to make them work with Bootstrap's native
-      examples.
+    <div class="alert alert-danger" *ngIf="!usNm.valid">
+      <h4>Username</h4>
+      Kindly enter the user name
     </div>
+
+    <div class="alert alert-danger" *ngIf="!pass.valid">
+      <h4>Password</h4>
+      Kindly Enter proper password.
+    </div>
+
+    <div class="alert alert-danger" *ngIf="!eml.valid">
+      <h4>Email </h4>
+     Enter email or check the email format is correct.
+    </div>
+
     <hr>
 
     <div class="row">
@@ -19,7 +29,9 @@
               class="form-control" 
               placeholder="Username"
               name="usNm"
-              [(ngModel)]="myVal.usNm">
+              [(ngModel)]="myVal.usNm"
+              required
+              #usNm="ngModel">
           </div>
           <div class="form-group float-label-control">
             <label for="">Password</label>
@@ -28,7 +40,9 @@
               class="form-control" 
               placeholder="Password"
               name="pass"
-              [(ngModel)]="myVal.pass">
+              [(ngModel)]="myVal.pass"
+              required
+              #pass="ngModel">
           </div>
           <div class="form-group float-label-control">
             <label for="">Email Address</label>
@@ -37,13 +51,17 @@
               class="form-control" 
               placeholder="What's your email address?"
               name="eml"
-              [(ngModel)]="myVal.eml">
+              [(ngModel)]="myVal.eml"
+              required
+              pattern="[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?"
+              #eml="ngModel">
           </div>
           <div class="form-group float-label-control">
             <input 
               type="submit" 
               class="btn btn-primary" 
-              value="Submit">
+              value="Submit"
+              [disabled]="!myFrm.valid">
           </div>
         </form>
       </div>

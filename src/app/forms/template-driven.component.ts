@@ -19,7 +19,7 @@ export class TemplateDrivenComponent implements OnInit {
   }
 
   myFrmSub(myFrm: NgForm) {
-    //console.log(myFrm.value);
-    console.log(this.myVal);
+    console.log(myFrm);
+    //console.log(this.myVal);
   }
 }
