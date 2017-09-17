@@ -2,7 +2,7 @@ import { MyService } from './services/my.service';
 import { WebService } from './services/web.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RatingModule } from 'ngx-rating';
 import { Ng2TableModule } from 'ng2-table/ng2-table';
 
@@ -30,6 +30,7 @@ import { FbComponent } from './services/fb.component';
 import { InstaComponent } from './services/insta.component';
 import { FormsComponent } from './forms/forms.component';
 import { TemplateDrivenComponent } from './forms/template-driven.component';
+import { ReactiveFormsComponent } from './forms/reactive-forms/reactive-forms.component';
 
 
 @NgModule({
@@ -57,13 +58,15 @@ import { TemplateDrivenComponent } from './forms/template-driven.component';
     FbComponent,
     InstaComponent,
     FormsComponent,
-    TemplateDrivenComponent
+    TemplateDrivenComponent,
+    ReactiveFormsComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     RatingModule,
-    Ng2TableModule
+    Ng2TableModule,
+    ReactiveFormsModule
   ],
   providers: [WebService, MyService],
   bootstrap: [AppComponent]
