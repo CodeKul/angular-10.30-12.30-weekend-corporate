@@ -1,18 +1,19 @@
 <div class="container">
   <div class="row">
-    <div class="alert alert-danger" >
+    <div class="alert alert-danger" *ngIf="!frmGrp.controls.usNm.valid">
       <h4>Username</h4>
       Kindly enter the user name
+      <br>{{frmGrp.controls.usNm.errors.err}}
     </div>
 
-    <div class="alert alert-danger" >
+    <div class="alert alert-danger" *ngIf="!frmGrp.controls.pass.valid">
       <h4>Password</h4>
       Kindly Enter proper password.
     </div>
 
-    <div class="alert alert-danger" >
+    <div class="alert alert-danger" *ngIf="!frmGrp.controls.eml.valid">
       <h4>Email </h4>
-     Enter email or check the email format is correct.
+      Enter email or check the email format is correct.
     </div>
 
     <hr>
@@ -21,33 +22,21 @@
       <div class="col-sm-8">
 
         <h4 class="page-header">Template Driven Froms</h4>
-        <form role="form"(ngSubmit)="myFrmSub()">
+        <form role="form" (ngSubmit)="myFrmSub()" [formGroup]="frmGrp" novalidate>
           <div class="form-group float-label-control">
             <label for="">Username</label>
-            <input 
-              type="email" 
-              class="form-control" 
-              placeholder="Username">
+            <input type="email" class="form-control" placeholder="Username" formControlName="usNm">
           </div>
           <div class="form-group float-label-control">
             <label for="">Password</label>
-            <input 
-              type="password" 
-              class="form-control" 
-              placeholder="Password">
+            <input type="password" class="form-control" placeholder="Password" formControlName="pass">
           </div>
           <div class="form-group float-label-control">
             <label for="">Email Address</label>
-            <input 
-              type="email" 
-              class="form-control" 
-              placeholder="What's your email address?">
+            <input type="email" class="form-control" placeholder="What's your email address?" formControlName="eml">
           </div>
           <div class="form-group float-label-control">
-            <input 
-              type="submit" 
-              class="btn btn-primary" 
-              value="Submit">
+            <input type="submit" class="btn btn-primary" value="Submit" [disabled]="!frmGrp.valid">
           </div>
         </form>
       </div>

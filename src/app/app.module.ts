@@ -31,6 +31,7 @@ import { InstaComponent } from './services/insta.component';
 import { FormsComponent } from './forms/forms.component';
 import { TemplateDrivenComponent } from './forms/template-driven.component';
 import { ReactiveFormsComponent } from './forms/reactive-forms/reactive-forms.component';
+import { PipesComponent } from './pipes/pipes.component';
 
 
 @NgModule({
@@ -59,7 +60,8 @@ import { ReactiveFormsComponent } from './forms/reactive-forms/reactive-forms.co
     InstaComponent,
     FormsComponent,
     TemplateDrivenComponent,
-    ReactiveFormsComponent
+    ReactiveFormsComponent,
+    PipesComponent
   ],
   imports: [
     BrowserModule,
