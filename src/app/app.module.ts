@@ -1,3 +1,4 @@
+import { WebEmulationService } from './pipes/web-emulation.service';
 import { MyService } from './services/my.service';
 import { WebService } from './services/web.service';
 import { BrowserModule } from '@angular/platform-browser';
@@ -32,6 +33,8 @@ import { FormsComponent } from './forms/forms.component';
 import { TemplateDrivenComponent } from './forms/template-driven.component';
 import { ReactiveFormsComponent } from './forms/reactive-forms/reactive-forms.component';
 import { PipesComponent } from './pipes/pipes.component';
+import { MobilePipe } from './pipes/mobile.pipe';
+import { FilerPipe } from './pipes/filer.pipe';
 
 
 @NgModule({
@@ -61,7 +64,9 @@ import { PipesComponent } from './pipes/pipes.component';
     FormsComponent,
     TemplateDrivenComponent,
     ReactiveFormsComponent,
-    PipesComponent
+    PipesComponent,
+    MobilePipe,
+    FilerPipe
   ],
   imports: [
     BrowserModule,
@@ -70,7 +75,7 @@ import { PipesComponent } from './pipes/pipes.component';
     Ng2TableModule,
     ReactiveFormsModule
   ],
-  providers: [WebService, MyService],
+  providers: [WebService, MyService, WebEmulationService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
